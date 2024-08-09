@@ -7,12 +7,6 @@ from user import user  # Importa a classe ou função user diretamente do módul
 import keyboard  # Importa a biblioteca keyboard para detectar pressionamentos de teclas.
 from datetime import datetime  # Importa a classe datetime para manipulação de datas e horas.
 
-# O cliente precisa permanecer "online" para receber a data e hora a cada segundo.
-# Criar um booleano para identificar se o cliente está online ou offline.
-# Transformar a chave "nome" em uma chave candidata (potencialmente única) no banco de dados.
-# O cliente precisa receber de forma isolada o retorno da sequência de Fibonacci se enviar um número como requisição.
-# Criar uma condição (if) para verificar se o nome (único) já existe e, caso não exista, criar no banco de dados.
-
 # Função que identifica se a string recebida é uma data e hora no formato esperado.
 def is_datetime(message):
     test_str = message  # Inicializa a string a partir da mensagem recebida.
