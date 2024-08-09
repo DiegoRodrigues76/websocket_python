@@ -1,0 +1,25 @@
+services:
+  server:
+    # Define que este serviço usará a imagem oficial do MySQL versão 8.0.
+    image: mysql:8.0
+    
+    # Nomeia o contêiner como 'db_servidor'.
+    container_name: db_servidor
+    
+    # Configura o contêiner para reiniciar automaticamente em caso de falha ou se o Docker for reiniciado.
+    restart: always
+    
+    # Define variáveis de ambiente para configurar o banco de dados MySQL.
+    environment:
+      MYSQL_DATABASE: banco_clientes  # Nome do banco de dados que será criado na inicialização.
+      MYSQL_USER: user  # Nome do usuário que será criado para acessar o banco de dados.
+      MYSQL_PASSWORD: user  # Senha para o usuário 'user'.
+      MYSQL_ROOT_PASSWORD: root  # Senha para o usuário root (superusuário do MySQL).
+    
+    # Mapeia a porta 3306 do contêiner para a porta 3306 do host, permitindo o acesso ao MySQL a partir do host.
+    ports:
+      - 3306:3306
+    
+    # Expõe a porta 3306 para outros serviços do Docker que estejam na mesma rede.
+    expose:
+      - 3306

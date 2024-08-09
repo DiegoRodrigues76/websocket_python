@@ -1,0 +1,33 @@
+# Use uma imagem base do Python
+FROM python:3.12-slim
+
+# Defina o diretório de trabalho no contêiner
+WORKDIR /app
+
+# Copie o arquivo de requisitos para o diretório de trabalho
+COPY requirements.txt .
+
+# Instale as dependências
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copie o restante dos arquivos do projeto para o diretório de trabalho
+COPY . .
+
+# Exponha a porta que a aplicação utilizará
+EXPOSE 3306
+
+# Defina o comando a ser executado quando o contêiner iniciar
+CMD ["python", "app/main/main.py"]
+
+# Primeiro Passo:
+#     No terminal, navegue até o diretório onde está o Dockerfile e execute:
+#        > docker build -t python-app . 
+
+#     Aqui, "python-app" é o nome da imagem Docker.
+
+# Segundo Passo:
+#     Depois de construir a imagem, execute o contêiner:
+#        > docker run -p 3306:3306 python-app
+    
+#         Isso mapeia a porta 3306 do contêiner para a porta 3306 no seu host,
+#         permitindo que você acesse sua aplicação através dessa porta.
