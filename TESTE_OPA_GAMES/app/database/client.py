@@ -38,7 +38,7 @@ async def hello(websocket):
 
 # Função que coordena as tarefas assíncronas.
 async def gather_handler(websocket):
-    with connect("ws://localhost:6687") as websocket:  # Conecta ao websocket na URL especificada.
+    with connect("ws://localhost:3306") as websocket:  # Conecta ao websocket na URL especificada.
         await asyncio.gather(
             input_handler(websocket),  # Lida com a entrada do usuário.
             hello(websocket)  # Lida com as mensagens recebidas.
