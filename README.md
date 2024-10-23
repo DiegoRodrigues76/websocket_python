@@ -1,6 +1,6 @@
 # Projeto de Teste para Desenvolvedor Backend
 
-Este projeto foi desenvolvido como parte do teste de seleção para a vaga de Desenvolvedor Backend PL. O objetivo do desafio era criar um sistema com conexão via WebSocket, gerenciar clientes conectados, processar comandos específicos e utilizar Docker para o ambiente de desenvolvimento.
+Este projeto foi desenvolvido como parte do teste para Desenvolvedor Backend PL. O objetivo do desafio era criar um sistema com conexão via WebSocket, gerenciar clientes conectados, processar comandos específicos e utilizar Docker para o ambiente de desenvolvimento.
 
 ## 🛠 Funcionalidades Implementadas
 
